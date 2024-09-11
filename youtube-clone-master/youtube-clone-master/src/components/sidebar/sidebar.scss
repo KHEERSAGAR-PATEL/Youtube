@@ -1,0 +1,76 @@
+@import "../../index.scss";
+
+.sidebar{
+    background-color: $background-secondary;
+    width: 20vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    transition: transform 0.2s ease-in;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    a{
+        text-decoration: none;
+        color: $text-color;
+    }
+    li{
+        display: flex;
+        list-style: none;
+        border-radius: 10px;
+        align-items: center;
+        margin: 4px 0;
+        cursor: pointer;
+        padding: 0.5rem 1.5rem;
+        
+        h6{
+            margin: 8px;
+            font-size: 17px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+        }
+        
+        
+        &:hover{
+            background-color: #212428;
+        }
+        
+    }
+
+    hr{
+        margin: 0.5rem 0;
+    }
+
+    &.hidebar{
+        transform: translateX(0);
+    }
+
+
+}
+
+@media (max-width: $breakpoint-medium){
+    .sidebar{
+        width: 115px;
+        z-index: 2000;
+        li{
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        h6{
+            display: none;
+        }
+
+    }
+}
+
+@media (max-width: $breakpoint-small){
+    .sidebar{
+        transform: translateX(-100%);
+        z-index: 2000;
+        // position: fixed;
+        z-index: 999;
+    }
+}

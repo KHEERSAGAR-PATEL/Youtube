@@ -1,0 +1,48 @@
+@import "../../index.scss";
+
+.watch-video-container {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  .left {
+    margin-left: 3px;
+    width: 71%;
+    position: relative;
+    .video {
+      width: 100%;
+      height: 480px;
+      padding: 15px 0;
+      iframe {
+        width: 100%;
+        border-radius: 10px;
+        height: 100%;
+      }
+    }
+  }
+
+  .right {
+    width: 35%;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hidedownload {
+    display: none;
+  }
+}
+
+@media (max-width: 1016px) {
+  .watch-video-container {
+    flex-direction: column;
+    align-items: center;
+    .left {
+      width: 95%;
+    }
+    .right {
+      margin: 20px 0px;
+      width: 95%;
+    }
+  }
+}
